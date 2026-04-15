@@ -29,7 +29,7 @@ RehabLink continuously monitors key physiological signals during rehabilitation 
 
 ## Repository Contents
 
-- `flows (26).json` — Complete Node-RED flow
+- `rehablink_flow.json` — Complete Node-RED flow
 - `RehabLink_report.pdf` — Full project documentation
 
 ## Technologies
