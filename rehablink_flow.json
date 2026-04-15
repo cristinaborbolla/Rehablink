@@ -1,0 +1,2010 @@
+[
+    {
+        "id": "044835a0a8c1c66c",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2e11f05d92341a05",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "02b18f7676507956",
+        "type": "ui_tab",
+        "name": "Sensors",
+        "icon": "memory",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c216dfce109192c9",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#f0b7e4",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#eab8d0",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#eab8d0",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#eab8d0",
+                    "edited": true
+                },
+                "page-backgroundColor": {
+                    "value": "#fff5fa",
+                    "edited": true
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#f5dbe8",
+                    "edited": true
+                },
+                "group-textColor": {
+                    "value": "#d095b2",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#f5e0ea",
+                    "edited": true
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "widget-textColor": {
+                    "value": "#cb90ac",
+                    "edited": true
+                },
+                "widget-backgroundColor": {
+                    "value": "#eab8d0",
+                    "edited": true
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c45fdaf7484b397c",
+        "type": "ui_group",
+        "name": "EMG",
+        "tab": "02b18f7676507956",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d66e44d62f34186c",
+        "type": "ui_group",
+        "name": "Flexion",
+        "tab": "02b18f7676507956",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "996e5f0e55338a51",
+        "type": "ui_group",
+        "name": "Heart Rate",
+        "tab": "02b18f7676507956",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bfcd518b7bb24f20",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "02b18f7676507956",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2498db06b68acfec",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "02b18f7676507956",
+        "order": 1,
+        "disp": false,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "86802f0a1635ba98",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "home",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "72c8292923efa678",
+        "type": "ui_tab",
+        "name": "Patient's history",
+        "icon": "history",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "01aebd4217a557a9",
+        "type": "ui_group",
+        "name": "",
+        "tab": "86802f0a1635ba98",
+        "order": 1,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d3abe339d4d35d4c",
+        "type": "ui_spacer",
+        "z": "044835a0a8c1c66c",
+        "name": "spacer",
+        "group": "01aebd4217a557a9",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e18a64bda324b032",
+        "type": "ui_spacer",
+        "z": "044835a0a8c1c66c",
+        "name": "spacer",
+        "group": "01aebd4217a557a9",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "be6df10f04463067",
+        "type": "ui_group",
+        "name": "Download History",
+        "tab": "72c8292923efa678",
+        "order": 6,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "24103da8499971cf",
+        "type": "ui_tab",
+        "name": "What is this device?",
+        "icon": "info",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d7d8309a5ffdaa7c",
+        "type": "ui_group",
+        "name": "",
+        "tab": "24103da8499971cf",
+        "order": 1,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "df8d938423b14051",
+        "type": "ui_tab",
+        "name": "Alerts",
+        "icon": "warning",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "84c24ca23ecad804",
+        "type": "ui_group",
+        "name": "",
+        "tab": "df8d938423b14051",
+        "order": 1,
+        "disp": false,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2b265dc07579f681",
+        "type": "ui_tab",
+        "name": "Admin Access",
+        "icon": "lock",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d443e1fae3073e37",
+        "type": "ui_group",
+        "name": "Admin control",
+        "tab": "2b265dc07579f681",
+        "order": 1,
+        "disp": false,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "607f1992c577087b",
+        "type": "ui_group",
+        "name": "",
+        "tab": "2b265dc07579f681",
+        "order": 3,
+        "disp": true,
+        "width": "24",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "7836e7d8024b6fbc",
+        "type": "ui_group",
+        "name": "",
+        "tab": "2b265dc07579f681",
+        "order": 2,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "508691841021a7c4",
+        "type": "mqtt in",
+        "z": "044835a0a8c1c66c",
+        "name": "",
+        "topic": "biomed/sensor",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "2e11f05d92341a05",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 620,
+        "y": 100,
+        "wires": [
+            [
+                "dc7c059b7893f8a0",
+                "266cd687dc543a01"
+            ]
+        ]
+    },
+    {
+        "id": "e6c6e59c163f2a60",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Divide sensors",
+        "func": "return [\n  { payload: Number(msg.payload.EMG_raw) },\n  { payload: msg.payload.EMG_state },\n  { payload: Number(msg.payload.Flex_value) },\n  { payload: msg.payload.Flex_state },\n  { payload: Number(msg.payload.Heart_rate) },\n  { payload: msg.payload.HR_state },\n  { payload: Number(msg.payload.Temp_C) },\n  { payload: msg.payload.Temp_state }\n];",
+        "outputs": 8,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 100,
+        "wires": [
+            [
+                "54b0299449848e93",
+                "37f8b0ff0fbf5ecf",
+                "d941f3831c0bb7fb",
+                "2a0c858ec6857be8",
+                "5696964d9c841833"
+            ],
+            [
+                "59eaee7c746bc82d"
+            ],
+            [
+                "b45af455ecfa8c3c",
+                "76df5ef2864cd3dd",
+                "877e8c965677a5fc",
+                "d772fb755cbcc74b"
+            ],
+            [
+                "12a43415bf55a161"
+            ],
+            [
+                "a7ab4bce096d532d",
+                "74b7f81ff8719391",
+                "8b7ac71ae7d3d361",
+                "d12a2f23e90cd0f4",
+                "0d7afb3448d6256c",
+                "0aaa15cd4049e836"
+            ],
+            [],
+            [
+                "46e1e70472a28b9d",
+                "d99cd16b4f2beea8",
+                "3fc7e804e1d1ee8a",
+                "f01fb6b3f2c74bd6",
+                "a5c49e0a434fa088"
+            ],
+            [
+                "82f8fc7fa8e37bc3"
+            ]
+        ]
+    },
+    {
+        "id": "59eaee7c746bc82d",
+        "type": "ui_text",
+        "z": "044835a0a8c1c66c",
+        "group": "c45fdaf7484b397c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "EMG state",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1350,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "12a43415bf55a161",
+        "type": "ui_text",
+        "z": "044835a0a8c1c66c",
+        "group": "d66e44d62f34186c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Flex state",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1340,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "82f8fc7fa8e37bc3",
+        "type": "ui_text",
+        "z": "044835a0a8c1c66c",
+        "group": "bfcd518b7bb24f20",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperature state",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1370,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "2a0c858ec6857be8",
+        "type": "ui_chart",
+        "z": "044835a0a8c1c66c",
+        "name": "",
+        "group": "c45fdaf7484b397c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#b7d0f0",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1330,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b45af455ecfa8c3c",
+        "type": "ui_chart",
+        "z": "044835a0a8c1c66c",
+        "name": "",
+        "group": "d66e44d62f34186c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1330,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a7ab4bce096d532d",
+        "type": "ui_chart",
+        "z": "044835a0a8c1c66c",
+        "name": "",
+        "group": "996e5f0e55338a51",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1330,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "46e1e70472a28b9d",
+        "type": "ui_chart",
+        "z": "044835a0a8c1c66c",
+        "name": "",
+        "group": "bfcd518b7bb24f20",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1330,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "74b7f81ff8719391",
+        "type": "ui_text",
+        "z": "044835a0a8c1c66c",
+        "group": "996e5f0e55338a51",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current Heart Rate:",
+        "format": "{{msg.payload}} bpm",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1370,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "54b0299449848e93",
+        "type": "ui_text",
+        "z": "044835a0a8c1c66c",
+        "group": "c45fdaf7484b397c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current EMG:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1360,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "76df5ef2864cd3dd",
+        "type": "ui_text",
+        "z": "044835a0a8c1c66c",
+        "group": "d66e44d62f34186c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current Flex:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1350,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d99cd16b4f2beea8",
+        "type": "ui_text",
+        "z": "044835a0a8c1c66c",
+        "group": "bfcd518b7bb24f20",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current Temperature:",
+        "format": "{{msg.payload}} ºC",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1380,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "659da0d669b2cbc2",
+        "type": "ui_dropdown",
+        "z": "044835a0a8c1c66c",
+        "name": "",
+        "label": "Select patient",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "2498db06b68acfec",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Select patient",
+                "value": "Select patient",
+                "type": "str"
+            },
+            {
+                "label": "P001",
+                "value": "P001",
+                "type": "str"
+            },
+            {
+                "label": "P002",
+                "value": "P002",
+                "type": "str"
+            },
+            {
+                "label": "P003",
+                "value": "P003",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "payload",
+        "topicType": "msg",
+        "className": "",
+        "x": 140,
+        "y": 420,
+        "wires": [
+            [
+                "ad1751745215f476",
+                "62bb7b60cf57d8d4"
+            ]
+        ]
+    },
+    {
+        "id": "04b3bb498de1ca51",
+        "type": "change",
+        "z": "044835a0a8c1c66c",
+        "name": "Set selected Patient_ID",
+        "rules": [
+            {
+                "t": "set",
+                "p": "patient_id",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c95ca093a8ab3c94",
+        "type": "mqtt out",
+        "z": "044835a0a8c1c66c",
+        "name": "",
+        "topic": "biomed/patient_select",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2e11f05d92341a05",
+        "x": 880,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "6bc8cb69a8cd476e",
+        "type": "http in",
+        "z": "044835a0a8c1c66c",
+        "name": "http in",
+        "url": "/download",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "88bb440144d1c908"
+            ]
+        ]
+    },
+    {
+        "id": "88bb440144d1c908",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Generate CSV file",
+        "func": "let patient = msg.req.query.patient;\n\nif (!patient || !/^P00[1-3]$/.test(patient)) {\n    msg.statusCode = 400;\n    msg.payload = \"❌ Patient ID no válido.\";\n    return msg;\n}\n\nlet data = flow.get(patient);\nif (!data || data.length === 0) {\n    msg.statusCode = 404;\n    msg.payload = `📭 No hay datos guardados para ${patient}`;\n    return msg;\n}\n\n// Cabecera CSV con punto y coma\nlet csv = \"Timestamp;Patient_ID;EMG_raw;EMG_state;Flex_value;Flex_state;Heart_rate;HR_state;Temp_C;Temp_state\\n\";\n\n// Añadir filas con timestamp en hora local (España)\ndata.forEach(d => {\n    let localDate = new Date(d.timestamp);\n    let timestamp = localDate.toLocaleString(\"es-ES\", {\n        timeZone: \"Europe/Madrid\"\n    });\n\n    csv += `${timestamp};${d.Patient_ID};${d.EMG_raw};${d.EMG_state};${d.Flex_value};${d.Flex_state};${d.Heart_rate};${d.HR_state};${d.Temp_C};${d.Temp_state}\\n`;\n});\n\nmsg.payload = csv;\nmsg.headers = {\n    \"Content-Disposition\": `attachment; filename=biomedical_data_${patient}.csv`,\n    \"Content-Type\": \"text/csv\"\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 260,
+        "wires": [
+            [
+                "c233f3a0801281dc"
+            ]
+        ]
+    },
+    {
+        "id": "c233f3a0801281dc",
+        "type": "http response",
+        "z": "044835a0a8c1c66c",
+        "name": "Send CSV",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3eda9f106f68a281",
+        "type": "inject",
+        "z": "044835a0a8c1c66c",
+        "name": "Reset dashboard",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Select patient",
+        "payloadType": "str",
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "04b3bb498de1ca51",
+                "c95ca093a8ab3c94",
+                "58d9572a652778d8",
+                "6ef43b1918ba9af4",
+                "eb7d465e5eb43e7e",
+                "86ef1e463973460b"
+            ]
+        ]
+    },
+    {
+        "id": "a8e54a38c134ee48",
+        "type": "ui_ui_control",
+        "z": "044835a0a8c1c66c",
+        "name": "Force dropdown",
+        "events": "all",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "4ac98f17fae2ccaf"
+            ]
+        ]
+    },
+    {
+        "id": "4ac98f17fae2ccaf",
+        "type": "change",
+        "z": "044835a0a8c1c66c",
+        "name": "Visualmente: Select patient",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "\"Select patient\"",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 180,
+        "y": 340,
+        "wires": [
+            [
+                "659da0d669b2cbc2"
+            ]
+        ]
+    },
+    {
+        "id": "58d9572a652778d8",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Reset EMG",
+        "func": "return { payload: [], topic: \"reset\" };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 300,
+        "wires": [
+            [
+                "2a0c858ec6857be8"
+            ]
+        ]
+    },
+    {
+        "id": "6ef43b1918ba9af4",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Reset Flex",
+        "func": "return { payload: [], topic: \"reset\" };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 340,
+        "wires": [
+            [
+                "b45af455ecfa8c3c"
+            ]
+        ]
+    },
+    {
+        "id": "eb7d465e5eb43e7e",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Reset HR",
+        "func": "return { payload: [], topic: \"reset\" };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 380,
+        "wires": [
+            [
+                "a7ab4bce096d532d"
+            ]
+        ]
+    },
+    {
+        "id": "86ef1e463973460b",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Reset Temperature",
+        "func": "return { payload: [], topic: \"reset\" };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 420,
+        "wires": [
+            [
+                "46e1e70472a28b9d"
+            ]
+        ]
+    },
+    {
+        "id": "ad1751745215f476",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Detect patient change",
+        "func": "let current = msg.payload;\nlet previous = flow.get(\"previous_patient\") || \"\";\n\nif (current !== previous && current !== \"Select patient\") {\n    flow.set(\"previous_patient\", current);\n    return msg;  // solo deja pasar si ha cambiado de paciente\n}\n\nreturn null; // no hacer nada si se repite o es 'Select patient'",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 420,
+        "wires": [
+            [
+                "c95ca093a8ab3c94",
+                "58d9572a652778d8",
+                "6ef43b1918ba9af4",
+                "eb7d465e5eb43e7e",
+                "86ef1e463973460b",
+                "04b3bb498de1ca51",
+                "62bb7b60cf57d8d4"
+            ]
+        ]
+    },
+    {
+        "id": "62bb7b60cf57d8d4",
+        "type": "ui_template",
+        "z": "044835a0a8c1c66c",
+        "group": "be6df10f04463067",
+        "name": "Download CSV Button",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"text-align: center; padding: 10px;\">\n  <button id=\"downloadBtn\" style=\"\n    background-color: #D095B2;\n    color: white;\n    border: none;\n    padding: 14px 32px;\n    font-size: 17px;\n    border-radius: 10px;\n    cursor: pointer;\n    width: 100%;\n    max-width: 500px;\n  \">\n    Download CSV of the patient\n  </button>\n</div>\n\n<script>\n  (function(scope) {\n    let patient = null;\n\n    scope.$watch('msg.payload', function(p) {\n      if (p && p.startsWith(\"P00\")) {\n        patient = p;\n      }\n    });\n\n    document.getElementById(\"downloadBtn\").addEventListener(\"click\", function () {\n      if (!patient) {\n        alert(\"❗ Please select a patient first.\");\n        return;\n      }\n      const link = document.createElement(\"a\");\n      link.href = \"/download?patient=\" + encodeURIComponent(patient);\n      link.download = \"biomedical_data_\" + patient + \".csv\";\n      document.body.appendChild(link);\n      link.click();\n      document.body.removeChild(link);\n    });\n  })(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 160,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "37f8b0ff0fbf5ecf",
+        "type": "ui_gauge",
+        "z": "044835a0a8c1c66c",
+        "name": "Gauge EMG",
+        "group": "c45fdaf7484b397c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#e6e600"
+        ],
+        "seg1": "200",
+        "seg2": "350",
+        "diff": true,
+        "className": "",
+        "x": 1350,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "8b7ac71ae7d3d361",
+        "type": "ui_gauge",
+        "z": "044835a0a8c1c66c",
+        "name": "Gauge Heart Rate",
+        "group": "996e5f0e55338a51",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "bpm",
+        "format": "{{value}}",
+        "min": "40",
+        "max": "120",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#e6e600"
+        ],
+        "seg1": "50",
+        "seg2": "100",
+        "diff": true,
+        "className": "",
+        "x": 1370,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "3fc7e804e1d1ee8a",
+        "type": "ui_gauge",
+        "z": "044835a0a8c1c66c",
+        "name": "Gauge Temperature",
+        "group": "bfcd518b7bb24f20",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "ºC",
+        "format": "{{value}}",
+        "min": "20",
+        "max": "35",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "24",
+        "seg2": "28",
+        "diff": true,
+        "className": "",
+        "x": 1380,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "877e8c965677a5fc",
+        "type": "ui_gauge",
+        "z": "044835a0a8c1c66c",
+        "name": "Gauge Flexion",
+        "group": "d66e44d62f34186c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "",
+        "format": "{{value}}",
+        "min": "970",
+        "max": "800",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "910",
+        "seg2": "870",
+        "diff": true,
+        "className": "",
+        "x": 1360,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d12a2f23e90cd0f4",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Set HR visual class",
+        "func": "let hr = Number(msg.payload);\n\nif (hr > 100) {\n    msg.class = \"hr-alert-red\";\n    msg.text = \"⚠️ HR too high!\";\n} else if (hr < 50) {\n    msg.class = \"hr-alert-yellow\";\n    msg.text = \"⚠️ HR too low!\";\n} else {\n    msg.class = \"hr-normal\";\n    msg.text = \"✔️ Normal HR\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 560,
+        "wires": [
+            [
+                "5df3c4398c88a27f"
+            ]
+        ]
+    },
+    {
+        "id": "5df3c4398c88a27f",
+        "type": "ui_template",
+        "z": "044835a0a8c1c66c",
+        "group": "996e5f0e55338a51",
+        "name": "HR backround alert",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .alert-red .nr-dashboard-card {\n        background-color: #ffcccc !important;\n    }\n\n    .alert-yellow .nr-dashboard-card {\n        background-color: #fff0b3 !important;\n    }\n\n    .normal .nr-dashboard-card {\n        background-color: #ffffff !important;\n    }\n</style>\n<div ng-class=\"msg.class\">\n    <span>{{msg.text}}</span>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1570,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d941f3831c0bb7fb",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Set EMG visual class",
+        "func": "let emg = Number(msg.payload);\n\nif (emg > 100) {\n    msg.class = \"alert-red\";\n    msg.text = \"⚠️ very high EMG\";\n} else if (emg < 50) {\n    msg.class = \"alert-yellow\";\n    msg.text = \"⚠️ very low EMG\";\n} else {\n    msg.class = \"normal\";\n    msg.text = \"✔️ Normal EMG\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1380,
+        "y": 60,
+        "wires": [
+            [
+                "5dbdaec491acfba6"
+            ]
+        ]
+    },
+    {
+        "id": "5dbdaec491acfba6",
+        "type": "ui_template",
+        "z": "044835a0a8c1c66c",
+        "group": "c45fdaf7484b397c",
+        "name": "EMG backround alert",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .alert-red .nr-dashboard-card {\n        background-color: #ffcccc !important;\n    }\n\n    .alert-yellow .nr-dashboard-card {\n        background-color: #fff0b3 !important;\n    }\n\n    .normal .nr-dashboard-card {\n        background-color: #ffffff !important;\n    }\n</style>\n<div ng-class=\"msg.class\">\n    <span>{{msg.text}}</span>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1600,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f01fb6b3f2c74bd6",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Set Temperature visual class",
+        "func": "let temp = Number(msg.payload);\n\nif (temp > 28) {\n    msg.class = \"alert-red\";\n    msg.text = \"⚠️ High temperature\";\n} else if (temp < 20) {\n    msg.class = \"alert-yellow\";\n    msg.text = \"⚠️ Low temperature\";\n} else {\n    msg.class = \"normal\";\n    msg.text = \"✔️ Normal temperature\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 820,
+        "wires": [
+            [
+                "03a82a8735f014f0"
+            ]
+        ]
+    },
+    {
+        "id": "03a82a8735f014f0",
+        "type": "ui_template",
+        "z": "044835a0a8c1c66c",
+        "group": "bfcd518b7bb24f20",
+        "name": "Temperature backround alert",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .alert-red .nr-dashboard-card {\n        background-color: #ffcccc !important;\n    }\n\n    .alert-yellow .nr-dashboard-card {\n        background-color: #fff0b3 !important;\n    }\n\n    .normal .nr-dashboard-card {\n        background-color: #ffffff !important;\n    }\n</style>\n<div ng-class=\"msg.class\">\n    <span>{{msg.text}}</span>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1660,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d772fb755cbcc74b",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Set Flex visual class",
+        "func": "let flex = Number(msg.payload);\n\nif (flex > 910) {\n    msg.class = \"alert-yellow\";\n    msg.text = \"⚠️ Very little flexion\";\n} else if (flex > 870) {\n    msg.class = \"alert-yellow\";\n    msg.text = \"✔️ Good flexion\";\n} else {\n    msg.class = \"normal\";\n    msg.text = \"✔️ Very good flexion\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1380,
+        "y": 340,
+        "wires": [
+            [
+                "d0a58a0497e2ab9a"
+            ]
+        ]
+    },
+    {
+        "id": "d0a58a0497e2ab9a",
+        "type": "ui_template",
+        "z": "044835a0a8c1c66c",
+        "group": "d66e44d62f34186c",
+        "name": "Flex backround alert",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .alert-red .nr-dashboard-card {\n        background-color: #ffcccc !important;\n    }\n\n    .alert-yellow .nr-dashboard-card {\n        background-color: #fff0b3 !important;\n    }\n\n    .normal .nr-dashboard-card {\n        background-color: #e0ffe0 !important;\n    }\n</style>\n<div ng-class=\"msg.class\">\n    <span>{{msg.text}}</span>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1600,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dc7c059b7893f8a0",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Save each patient",
+        "func": "let payload = msg.payload;\n\n// Si es un string (probablemente JSON), lo convertimos a objeto\nif (typeof payload === \"string\") {\n    try {\n        payload = JSON.parse(payload);\n    } catch (err) {\n        node.warn(\"❌ JSON inválido en payload\");\n        return null;\n    }\n}\n\n// Validar que todos los campos críticos están presentes\nif (\n    !payload.Patient_ID ||\n    payload.EMG_raw === undefined ||\n    payload.Flex_value === undefined ||\n    payload.Heart_rate === undefined ||\n    payload.Temp_C === undefined\n) {\n    node.warn(\"❌ Campos incompletos. Registro ignorado.\");\n    return null;\n}\n\n// Crear el registro con timestamp y todos los campos\nlet registro = {\n    timestamp: new Date().toISOString(),\n    Patient_ID: payload.Patient_ID,\n    EMG_raw: payload.EMG_raw,\n    EMG_state: payload.EMG_state,\n    Flex_value: payload.Flex_value,\n    Flex_state: payload.Flex_state,\n    Heart_rate: payload.Heart_rate,\n    HR_state: payload.HR_state,\n    Temp_C: payload.Temp_C,\n    Temp_state: payload.Temp_state\n};\n\n// Acumular el registro en la memoria flow\nlet data = flow.get(payload.Patient_ID) || [];\ndata.push(registro);\nflow.set(payload.Patient_ID, data);\n\n// Reenviar el mensaje para su visualización\nmsg.payload = payload;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 100,
+        "wires": [
+            [
+                "e6c6e59c163f2a60"
+            ]
+        ]
+    },
+    {
+        "id": "266cd687dc543a01",
+        "type": "debug",
+        "z": "044835a0a8c1c66c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "0c183f558e2c3d2c",
+        "type": "ui_template",
+        "z": "044835a0a8c1c66c",
+        "group": "d7d8309a5ffdaa7c",
+        "name": "Description",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"text-align: center; padding: 20px; min-height: 500px;\">\n    <p style=\"font-size: 18px; color: #333; max-width: 800px; margin: 0 auto;\">\n        This system continuously monitors muscle activity, joint flexion, heart rate, and room temperature to support safe and effective arm rehabilitation. Please select a sensor to learn more about its role in the therapy process.\n    </p>\n\n    <div style=\"max-width: 800px; margin: 0 auto; text-align: left;\">\n        <h3 style=\"color: #d81b60; margin-top: 30px; font-size: 22px;\">What does this system do?</h3>\n        <ul style=\"list-style: none; padding-left: 0; font-size: 18px; color: #000; margin-left: 0;\">\n            <li>· Tracks muscle effort in real time</li>\n            <li>· Measures arm flexion during movement</li>\n            <li>· Monitors heart rate to avoid overload</li>\n            <li>· Checks ambient temperature for comfort and safety</li>\n        </ul>\n        <p style=\"font-weight: bold; font-size: 18px; color: #000000; margin-top: 15px;\">\n            Select a sensor above to learn how it contributes to your recovery.\n        </p>\n    </div>\n\n    <div style=\"display: flex; flex-wrap: nowrap; justify-content: center; gap: 20px; max-width: 1000px; margin: 30px auto 0;\">\n        <div style=\"flex: 0 0 25%;\">\n            <button class=\"accordion\">EMG Sensor</button>\n            <div class=\"panel\">\n                <p>Measures electrical activity of muscles to evaluate muscle activation during arm movement.</p>\n            </div>\n        </div>\n\n        <div style=\"flex: 0 0 25%;\">\n            <button class=\"accordion\">Flex Sensor</button>\n            <div class=\"panel\">\n                <p>Tracks the degree of joint bending to analyze arm posture and flexion during rehabilitation.</p>\n            </div>\n        </div>\n\n        <div style=\"flex: 0 0 25%;\">\n            <button class=\"accordion\">Heart Rate Sensor</button>\n            <div class=\"panel\">\n                <p>Monitors the patient's heart rate in bpm to detect stress or overexertion during the session.</p>\n            </div>\n        </div>\n\n        <div style=\"flex: 0 0 25%;\">\n            <button class=\"accordion\">Temperature Sensor</button>\n            <div class=\"panel\">\n                <p>Controls skin temperature to ensure safe operating conditions and identify anomalies.</p>\n            </div>\n        </div>\n    </div>\n\n    <script>\n        var acc = document.getElementsByClassName(\"accordion\");\n        for (var i = 0; i < acc.length; i++) {\n            acc[i].onclick = function () {\n                this.classList.toggle(\"active\");\n                var panel = this.nextElementSibling;\n                panel.style.display = panel.style.display === \"block\" ? \"none\" : \"block\";\n            }\n        }\n    </script>\n\n    <style>\n        .accordion {\n            background-color: #EAB8D0;\n            color: #000000;\n            cursor: pointer;\n            width: 100%;\n            height: 120px;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            border: none;\n            font-size: 16px;\n            transition: 0.3s;\n            border-radius: 12px;\n            box-sizing: border-box;\n            text-align: center;\n            padding: 0 10px;\n            word-break: break-word;\n        }\n\n        .accordion:hover,\n        .accordion.active {\n            background-color: #D095B2;\n            color: #000000;\n        }\n\n        .panel {\n            padding: 10px 20px;\n            display: none;\n            background-color: #ffffff;\n            border: 2px solid #FDE8F8;\n            border-radius: 12px;\n            margin-top: 10px;\n            color: #000000;\n        }\n    </style>\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 310,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3fc8835bcd12263",
+        "type": "ui_template",
+        "z": "044835a0a8c1c66c",
+        "group": "01aebd4217a557a9",
+        "name": "Home page",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div\n    style=\"display: flex; flex-direction: column; align-items: center; justify-content: flex-start; height: 80vh; text-align: center; padding: 60px 20px 20px 20px;\">\n    <h2 style=\"color: #FDE8F8; font-weight: bold; max-width: 800px;\">\n        Welcome to a smart rehabilitation system designed to monitor and support patient recovery through\n        real-time biomedical insights.\n    </h2>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5696964d9c841833",
+        "type": "switch",
+        "z": "044835a0a8c1c66c",
+        "name": "EMG alert",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "350",
+                "vt": "str"
+            },
+            {
+                "t": "lt",
+                "v": "200",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1340,
+        "y": 120,
+        "wires": [
+            [
+                "cda4a17af4ff22e1"
+            ],
+            [
+                "1851431988022c6e"
+            ]
+        ]
+    },
+    {
+        "id": "cda4a17af4ff22e1",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "High EMG",
+        "func": "let id = flow.get(\"patient_id\") || \"Unknown\";\nlet val = Number(msg.payload);\n\nmsg.alertType = \"High EMG\";\nmsg.value = val;\nmsg.patient_id = id;\nmsg.payload = `🚨 High EMG detected: ${val}`;\nmsg.isAlert = true;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1530,
+        "y": 100,
+        "wires": [
+            [
+                "43f945730f3720d1",
+                "86baeef60b8ac37d"
+            ]
+        ]
+    },
+    {
+        "id": "1851431988022c6e",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Low EMG",
+        "func": "let id = flow.get(\"patient_id\") || \"Unknown\";\nlet val = Number(msg.payload);\n\nmsg.alertType = \"Low EMG\";\nmsg.value = val;\nmsg.patient_id = id;\nmsg.payload = `⚠️ Low EMG detected: ${val}`;\nmsg.isAlert = true;   \nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 140,
+        "wires": [
+            [
+                "43f945730f3720d1",
+                "86baeef60b8ac37d"
+            ]
+        ]
+    },
+    {
+        "id": "43f945730f3720d1",
+        "type": "ui_toast",
+        "z": "044835a0a8c1c66c",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1730,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9138a1ae7b1441ff",
+        "type": "ui_dropdown",
+        "z": "044835a0a8c1c66c",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "7836e7d8024b6fbc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Select patient",
+                "value": "Select patient",
+                "type": "str"
+            },
+            {
+                "label": "P001",
+                "value": "P001",
+                "type": "str"
+            },
+            {
+                "label": "P002",
+                "value": "P002",
+                "type": "str"
+            },
+            {
+                "label": "P003",
+                "value": "P003",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "payload",
+        "topicType": "msg",
+        "className": "",
+        "x": 120,
+        "y": 580,
+        "wires": [
+            [
+                "e74e9fc4c6053f52"
+            ]
+        ]
+    },
+    {
+        "id": "e74e9fc4c6053f52",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Detect patient change",
+        "func": "let current = msg.payload;\nlet previous = flow.get(\"previous_patient\") || \"\";\nlet ok = flow.get(\"admin_ok\") || false;\n\n// Solo procesar selecciones si el admin está autenticado\nif (!ok) {\n    return null;\n}\n\nif (current !== previous) {\n    flow.set(\"previous_patient\", current);\n    // Dejar pasar incluso si es 'Select patient' para poder borrar info anterior\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 580,
+        "wires": [
+            [
+                "8dd97f66479a7342"
+            ]
+        ]
+    },
+    {
+        "id": "8dd97f66479a7342",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Get Patient Info",
+        "func": "const id = msg.payload || \"\";\nconst ok = flow.get(\"admin_ok\") || false;\n\nlet patients = {\n    \"P001\": {\n        firstName: \"Ana\",\n        lastName: \"García Pérez\",\n        age: 29,\n        diagnosis: \"Humeral fracture\",\n        status: \"In rehabilitation\",\n        admissionDate: \"2025-03-02\",\n        doctor: \"Dr. López\",\n        treatment: \"Physiotherapy + daily monitoring\",\n        notes: \"Good progress\"\n    },\n    \"P002\": {\n        firstName: \"Carlos\",\n        lastName: \"Martínez Ruiz\",\n        age: 41,\n        diagnosis: \"Rotator cuff injury\",\n        status: \"Stable\",\n        admissionDate: \"2025-04-15\",\n        doctor: \"Dr. Pérez\",\n        treatment: \"Controlled passive exercises\",\n        notes: \"Mild residual pain\"\n    },\n    \"P003\": {\n        firstName: \"Lucía\",\n        lastName: \"Fernández Gómez\",\n        age: 35,\n        diagnosis: \"Brachial plexus palsy\",\n        status: \"Chronic\",\n        admissionDate: \"2025-01-10\",\n        doctor: \"Dr. Rivera\",\n        treatment: \"EMG stimulation and functional therapy\",\n        notes: \"No recent changes\"\n    }\n};\n\n// Solo mostrar datos si el admin está autenticado y se ha seleccionado un paciente válido\nmsg.payload = (ok && id in patients) ? patients[id] : null;\nmsg.admin_ok = ok;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 640,
+        "wires": [
+            [
+                "df6def96f9878769"
+            ]
+        ]
+    },
+    {
+        "id": "df6def96f9878769",
+        "type": "ui_template",
+        "z": "044835a0a8c1c66c",
+        "group": "607f1992c577087b",
+        "name": "Patient Details",
+        "order": 2,
+        "width": "24",
+        "height": "8",
+        "format": "<div ng-if=\"msg.admin_ok && msg.payload\" style=\"padding: 20px;\">\n  <div style=\"\n    background-color: #ffffff;\n    border: 2px solid #f4c5e8;\n    border-radius: 15px;\n    padding: 20px 30px;\n    max-width: 700px;\n    margin: 0 auto;\n    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);\n    color: #000000;\n  \">\n    <h3 style=\"color: #000000; text-align: center; margin-bottom: 20px;\">👤 Patient Personal Information</h3>\n    <table style=\"width: 100%; font-size: 16px; border-spacing: 10px;\">\n      <tr>\n        <td style=\"font-weight:bold;\">Name:</td>\n        <td>{{msg.payload.firstName}} {{msg.payload.lastName}}</td>\n      </tr>\n      <tr>\n        <td style=\"font-weight:bold;\">Age:</td>\n        <td>{{msg.payload.age}}</td>\n      </tr>\n      <tr>\n        <td style=\"font-weight:bold;\">Diagnosis:</td>\n        <td>{{msg.payload.diagnosis}}</td>\n      </tr>\n      <tr>\n        <td style=\"font-weight:bold;\">Status:</td>\n        <td>{{msg.payload.status}}</td>\n      </tr>\n      <tr>\n        <td style=\"font-weight:bold;\">Admission Date:</td>\n        <td>{{msg.payload.admissionDate}}</td>\n      </tr>\n      <tr>\n        <td style=\"font-weight:bold;\">Doctor:</td>\n        <td>{{msg.payload.doctor}}</td>\n      </tr>\n      <tr>\n        <td style=\"font-weight:bold;\">Treatment:</td>\n        <td>{{msg.payload.treatment}}</td>\n      </tr>\n      <tr>\n        <td style=\"font-weight:bold;\">Notes:</td>\n        <td>{{msg.payload.notes}}</td>\n      </tr>\n    </table>\n  </div>\n</div>\n\n<!-- Si no hay datos que mostrar, no mostramos nada -->\n<div ng-if=\"!msg.admin_ok || !msg.payload\" style=\"display:none;\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 840,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a4a8ba5bfc1ce1bb",
+        "type": "inject",
+        "z": "044835a0a8c1c66c",
+        "name": "Refresh patient info",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 210,
+        "y": 720,
+        "wires": [
+            [
+                "337b1cd70632a42c"
+            ]
+        ]
+    },
+    {
+        "id": "671834e67dce96c4",
+        "type": "ui_template",
+        "z": "044835a0a8c1c66c",
+        "group": "d443e1fae3073e37",
+        "name": "Admin login",
+        "order": 4,
+        "width": "24",
+        "height": "5",
+        "format": "<div ng-if=\"!msg.admin_ok\" style=\"\n  width: 100%;\n  min-height: 200px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #ffffff;\n  padding: 10px;\n  box-sizing: border-box;\n\">\n  <div style=\"\n    background-color: #ffffff;\n    border: 2px solid #f4c5e8;\n    border-radius: 15px;\n    padding: 30px 40px;\n    box-shadow: 2px 2px 15px rgba(0,0,0,0.1);\n    max-width: 400px;\n    width: 100%;\n    text-align: center;\n  \">\n    <p style=\"color: #000000; font-weight: bold; font-size: 18px; margin-bottom: 20px;\">\n      Enter admin password\n    </p>\n    <input type=\"password\" id=\"adminPass\" placeholder=\"Admin password\" style=\"\n      width: 100%;\n      padding: 12px;\n      margin-bottom: 15px;\n      border: 1px solid #ccc;\n      border-radius: 8px;\n      font-size: 16px;\n      box-sizing: border-box;\n    \">\n    <button onclick=\"verifyAdmin()\" style=\"\n      width: 100%;\n      background-color: #EAB8D0;\n      color: white;\n      padding: 12px;\n      border: none;\n      border-radius: 8px;\n      font-size: 16px;\n      cursor: pointer;\n      box-sizing: border-box;\n    \">\n      Login\n    </button>\n  </div>\n</div>\n\n<!-- Mensaje de bienvenida cuando está autenticado -->\n<div ng-if=\"msg.admin_ok\" style=\"\n  width: 100%;\n  padding: 15px;\n  text-align: center;\n  background-color: #ffffff;\n  border-radius: 10px;\n  margin-bottom: 10px;\n\">\n  <p style=\"color: #4CAF50; font-weight: bold; font-size: 16px; margin: 0;\">\n    ✅ Logged in successfully - Select a patient to view details\n  </p>\n</div>\n\n<script>\n(function(scope) {\n  // Send admin status on load\n  if (!window.loginInitialized) {\n    scope.send({admin_ok: false});\n    window.loginInitialized = true;\n  }\n  \n  window.verifyAdmin = function() {\n    const input = document.getElementById('adminPass').value;\n    if (input === 'admin123') {\n      scope.send({admin_ok: true});\n      \n      // Resetear dropdown a \"Select patient\" cuando nos autenticamos\n      setTimeout(() => {\n        document.querySelectorAll('select').forEach(select => {\n          if (select.options[0].text.includes('Select patient')) {\n            select.selectedIndex = 0;\n          }\n        });\n      }, 300);\n    } else {\n      alert('❌ Incorrect password');\n    }\n  };\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 220,
+        "y": 640,
+        "wires": [
+            [
+                "077b7a5f16abb98b"
+            ]
+        ]
+    },
+    {
+        "id": "077b7a5f16abb98b",
+        "type": "change",
+        "z": "044835a0a8c1c66c",
+        "name": "Set admin_ok in flow",
+        "rules": [
+            {
+                "t": "set",
+                "p": "admin_ok",
+                "pt": "flow",
+                "to": "admin_ok",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 640,
+        "wires": [
+            [
+                "2f6b3cef57cf38cf"
+            ]
+        ]
+    },
+    {
+        "id": "337b1cd70632a42c",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Handle Refresh Request",
+        "func": "// Forward only if admin is authenticated\nconst ok = flow.get(\"admin_ok\") || false;\n\nif (ok) {\n    // Usar el paciente actualmente seleccionado\n    const currentPatient = flow.get(\"previous_patient\") || \"\";\n    msg.payload = currentPatient;\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 720,
+        "wires": [
+            [
+                "8dd97f66479a7342"
+            ]
+        ]
+    },
+    {
+        "id": "2f6b3cef57cf38cf",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Reset patient selection on login",
+        "func": "const ok = flow.get(\"admin_ok\") || false;\n\n// Si el admin acaba de iniciar sesión\nif (ok) {\n    // Reseteamos la selección de paciente para comenzar limpio\n    flow.set(\"previous_patient\", \"\");\n    msg.payload = \"Select patient\";\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 680,
+        "wires": [
+            [
+                "8dd97f66479a7342"
+            ]
+        ]
+    },
+    {
+        "id": "0d7afb3448d6256c",
+        "type": "ui_text",
+        "z": "044835a0a8c1c66c",
+        "group": "996e5f0e55338a51",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Heart rate state",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1360,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "0aaa15cd4049e836",
+        "type": "switch",
+        "z": "044835a0a8c1c66c",
+        "name": "Heart rate alert",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "100",
+                "vt": "str"
+            },
+            {
+                "t": "lt",
+                "v": "50",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1360,
+        "y": 720,
+        "wires": [
+            [
+                "71f9407d393589e6"
+            ],
+            [
+                "38dc34ab6f0a4510"
+            ]
+        ]
+    },
+    {
+        "id": "71f9407d393589e6",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "High Heart rate",
+        "func": "let id = flow.get(\"patient_id\") || \"Unknown\";\nlet val = Number(msg.payload);\n\nmsg.alertType = \"High Heart Rate\";\nmsg.value = val;\nmsg.patient_id = id;\nmsg.payload = `🚨 High heart rate detected: ${val} bpm`;\nmsg.isAlert = true;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1580,
+        "y": 700,
+        "wires": [
+            [
+                "ba8468acef3d547c",
+                "86baeef60b8ac37d"
+            ]
+        ]
+    },
+    {
+        "id": "38dc34ab6f0a4510",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Low Heart rate",
+        "func": "let id = flow.get(\"patient_id\") || \"Unknown\";\nlet val = Number(msg.payload);\n\nmsg.alertType = \"Low Heart Rate\";\nmsg.value = val;\nmsg.patient_id = id;\nmsg.payload = `⚠️ Low heart rate detected: ${val} bpm`;\nmsg.isAlert = true;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1580,
+        "y": 740,
+        "wires": [
+            [
+                "ba8468acef3d547c",
+                "86baeef60b8ac37d"
+            ]
+        ]
+    },
+    {
+        "id": "ba8468acef3d547c",
+        "type": "ui_toast",
+        "z": "044835a0a8c1c66c",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Alert notification",
+        "x": 1800,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "6a0bd5d3afc68780",
+        "type": "ui_template",
+        "z": "044835a0a8c1c66c",
+        "group": "84c24ca23ecad804",
+        "name": "Alert History Table",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"overflow-x:auto;\">\n    <table style=\"width:100%; font-size: 14px;\">\n        <thead>\n            <tr style=\"background-color: #FFF5FA;\">\n                <th>Time</th>\n                <th>Patient</th>\n                <th>Type</th>\n                <th>Value</th>\n                <th>Message</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr ng-repeat=\"a in msg.payload\">\n                <td>{{a.timestamp}}</td>\n                <td>{{a.patient}}</td>\n                <td>{{a.type}}</td>\n                <td>{{a.value}}</td>\n                <td>{{a.message}}</td>\n            </tr>\n        </tbody>\n    </table>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2110,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "86baeef60b8ac37d",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Save alert",
+        "func": "// Solo procesar el mensaje si es una alerta\nif (msg.isAlert) {\n    let alerts = flow.get(\"alert_log\") || [];\n\n    // Obtener el paciente actual desde flow\n    let id = flow.get(\"patient_id\") || \"Unknown\";\n\n    // Crear alerta con ID del paciente seleccionado\n    let new_alert = {\n        timestamp: new Date().toLocaleString(),\n        patient: id,  // 👈 aquí garantizamos que es el mismo que está seleccionado\n        type: msg.alertType || \"Alert\",\n        value: msg.value || \"N/A\",\n        message: msg.payload\n    };\n\n    alerts.push(new_alert);\n    flow.set(\"alert_log\", alerts);\n\n    // Mostrar solo las alertas del paciente seleccionado actualmente\n    msg.payload = alerts.filter(a => a.patient === id);\n    return msg;\n}\n\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1960,
+        "y": 520,
+        "wires": [
+            [
+                "6a0bd5d3afc68780"
+            ]
+        ]
+    },
+    {
+        "id": "a5c49e0a434fa088",
+        "type": "switch",
+        "z": "044835a0a8c1c66c",
+        "name": "Temperature alert",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "28",
+                "vt": "str"
+            },
+            {
+                "t": "lt",
+                "v": "16",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1370,
+        "y": 980,
+        "wires": [
+            [
+                "1a45a3ab04436302"
+            ],
+            [
+                "1be87d5915e1c1c1"
+            ]
+        ]
+    },
+    {
+        "id": "1a45a3ab04436302",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "High Temp",
+        "func": "let id = flow.get(\"patient_id\") || \"Unknown\";\nlet val = Number(msg.payload);\n\nmsg.alertType = \"High Temp\";\nmsg.value = val;\nmsg.patient_id = id;\nmsg.payload = `🚨 High Temperature detected: ${val}`;\nmsg.isAlert = true;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 960,
+        "wires": [
+            [
+                "e2787ef3dd548223",
+                "86baeef60b8ac37d"
+            ]
+        ]
+    },
+    {
+        "id": "1be87d5915e1c1c1",
+        "type": "function",
+        "z": "044835a0a8c1c66c",
+        "name": "Low Temp",
+        "func": "let id = flow.get(\"patient_id\") || \"Unknown\";\nlet val = Number(msg.payload);\n\nmsg.alertType = \"Low Temp\";\nmsg.value = val;\nmsg.patient_id = id;\nmsg.payload = `⚠️ Low temperature detected: ${val}`;\nmsg.isAlert = true;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 1000,
+        "wires": [
+            [
+                "e2787ef3dd548223",
+                "86baeef60b8ac37d"
+            ]
+        ]
+    },
+    {
+        "id": "e2787ef3dd548223",
+        "type": "ui_toast",
+        "z": "044835a0a8c1c66c",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1790,
+        "y": 980,
+        "wires": []
+    }
+]
